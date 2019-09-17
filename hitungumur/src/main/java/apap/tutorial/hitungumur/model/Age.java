@@ -15,8 +15,7 @@ public class Age implements Serializable{
         return Period.between(this.getBirthdate(), currentDate).getYears();
     }
 
-    public double mercurianYears(){
-        return Math.floor(this.earthianYears()/ .24);
+    public double mercurianYears(){ return Math.floor(this.earthianYears()/ .32);
     }
 
     public double venusianYears(){
