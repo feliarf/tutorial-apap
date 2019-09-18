@@ -32,7 +32,7 @@ Pertanyaan 4: Tambahkan 1 contoh store lainnya sesukamu. Lalu cobalah untuk
 mengakses http://localhost:8080/store/view-all, apa yang akan ditampilkan? Sertakan
 juga bukti screenshotmu
 yang ditampilkan adalah list semua data-data toko yang sebelumnya telah dibuat
-![](https://ibb.co/Nm5NQg4)
+![](https://i.ibb.co/zXh3Xwz/Capture.png)
 
 ### What I did not understand
 (tuliskan apa saja yang kurang Anda mengerti, Anda dapat men-_check_ apabila Anda sudah mengerti
