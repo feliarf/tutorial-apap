@@ -7,6 +7,13 @@ public class StoreModel {
     private String keterangan;
     private int followers;
 
+    public StoreModel(String id, String nama, String keterangan, int followers) {
+        this.id = id;
+        this.nama = nama;
+        this.keterangan = keterangan;
+        this.followers = followers;
+    }
+
     public String getId() {
         return id;
     }
