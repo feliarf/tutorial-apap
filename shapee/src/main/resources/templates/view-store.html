@@ -11,9 +11,31 @@
         <h3 th:text="'Nama Store: ' + ${store.nama}"></h3>
         <h3 th:text="'Keterangan: ' + ${store.keterangan}"></h3>
         <h3 th:text="'Followers: ' + ${store.followers}"></h3>
+
+
+        <td><a th:href="@{/store/change/}+${store.id}"> Change Store</a></td>
+
+        <h2> Daftar Produk: </h2>
+
+        <div th:each="product : ${productList}">
+            <h3 th:text="'ID Product: ' + ${product.id}"></h3>
+            <h3 th:text="'Nama: ' + ${product.nama}"></h3>
+            <h3 th:text="'Harga: ' + ${product.harga}"></h3>
+            <h3 th:text="'Deskripsi: ' + ${product.deskripsi}"></h3>
+            <h3 th:text="'Stok: ' + ${product.stok}"></h3>
+            <td> <a th:href="@{~/product/change/{id}(id=${product.id})}"> change product </a></td><br>
+            <td> <a th:href="@{~/product/delete/{id}(id=${product.id})}"> delete product </a></td>
+            </br>
+        </div>
+        <div th:if="${isProductListEmpty}">
+            <td> <a th:href="@{~/store/delete/{id}(id=${store.id})}"> delete store </a></td>
+        </div>
     </div>
     <div th:unless = "${store != null}">
         <h3>Store tidak ditemukan</h3>
     </div>
+
+    <td> <a th:href="@{/product/add/}+${store.id}"> Add Product </a></td>
+
 </body>
 </html>

@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class StoreInMemoryService implements StoreService{
@@ -13,6 +14,11 @@ public class StoreInMemoryService implements StoreService{
 
     public StoreInMemoryService(){
         listStore = new ArrayList<>();
+    }
+
+    @Override
+    public StoreModel getStoreById(Long id) {
+        return null;
     }
 
     @Override
@@ -26,11 +32,21 @@ public class StoreInMemoryService implements StoreService{
     }
 
     @Override
-    public void deleteStore(StoreModel store){
-        listStore.remove(store);
+    public StoreModel changeStore(StoreModel storeModel) {
+        return null;
     }
 
     @Override
+    public String delete(StoreModel store) {
+        return null;
+    }
+
+    /*@Override
+    public void deleteStore(StoreModel store){
+        listStore.remove(store);
+    }*/
+
+    /*@Override
     public StoreModel getStoreById(String IdStore){
         for (int i=0 ; i<listStore.size(); i++){
             if(listStore.get(i).getId().equals(IdStore)){
@@ -38,5 +54,5 @@ public class StoreInMemoryService implements StoreService{
             }
         }
         return null;
-    }
+    }*/
 }
