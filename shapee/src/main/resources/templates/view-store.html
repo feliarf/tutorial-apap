@@ -16,7 +16,30 @@
         <td><a th:href="@{/store/change/}+${store.id}"> Change Store</a></td>
 
         <h2> Daftar Produk: </h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Id Product</th>
+                    <th>Nama</th>
+                    <th>Harga</th>
+                    <th>Deskripsi</th>
+                    <th>Stok</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="product, iterationStatus : *{productList}">
+                    <td th:text="${iterationStatus.count}"></td>
+                    <td th:text="${product.id}"></td>
+                    <td th:text="${product.nama}"></td>
+                    <td th:text="${product.harga}"></td>
+                    <td th:text="${product.deskripsi}"></td>
+                    <td th:text="${product.stok}"></td>
+                </tr>
+            </tbody>
+        </table>
 
+        <!--
         <div th:each="product : ${productList}">
             <h3 th:text="'ID Product: ' + ${product.id}"></h3>
             <h3 th:text="'Nama: ' + ${product.nama}"></h3>
@@ -27,6 +50,7 @@
             <td> <a th:href="@{~/product/delete/{id}(id=${product.id})}"> delete product </a></td>
             </br>
         </div>
+        !-->
         <div th:if="${isProductListEmpty}">
             <td> <a th:href="@{~/store/delete/{id}(id=${store.id})}"> delete store </a></td>
         </div>
