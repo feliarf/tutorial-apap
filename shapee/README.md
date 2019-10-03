@@ -69,3 +69,29 @@ Jawablah pertanyaan dibawah ini pada file readme.
        - FetchType.EAGER : digunakan untuk me-load suatu objek ketika objek parent diload
        - CascadeType.ALL : digunakan untuk membuat suatu objek dimana jika objek tersebut dihapus maka objek yang 
                             merefer ke objek tersebut juga akan terhapus.
+                            
+---
+
+## Tutorial 4
+### What I have learned today
+Jawablah pertanyaan dibawah ini pada file readme.
+1. Jelaskan yang anda pelajari dari melakukan latihan nomor 2, dan jelaskan tahapan bagaimana
+anda menyelesaikan latihan nomor 2
+    - yang saya pelajari dari latihan nomor dua adalah membuat suatu fragment atau suatu bagian kecil dari html
+    yang dapat digunakan dalam file HTML lain. Tahapan yang saya lakukan untuk menyelesaikannya yaitu 
+        1. Menambahkan pageTitle pada tag nav berikut <nav th:fragment="navbar (pageTitle)" class="navbar navbar-expand-lg navbar-light bg-light">
+        supaya judul navbar pada setiap halaman dapat disesuaikan dengan value dari halaman tersebut
+        2. Menambahkan lagi pageTitle pada tag a berikut <a class="navbar-brand" href="#" th:text="${pageTitle}"></a>
+        3. Mengisi pageTitle pada tag nav berikut <nav th:replace="fragments/fragment :: navbar (pageTitle='View Store')"></nav>
+        sesuai dengan fungsi halamannya
+2. Jelaskan yang anda pelajari dari latihan nomor 3, dan jelaskan tahapan bagaimana anda
+menyelesaikan latihan nomor 3
+3. Jelaskan perbedaan th:include dan th:replace
+    - th:include dan th:replace dan digunakan untuk memasukkan suatu bagian dari halaman lain sebagai fragments.
+    perbedaan dari th:include dan th:replace yaitu untuk th:include dapat digunakan untuk
+    menempatkan fragment ke dalam <div> tag, sedangkan th:replace dapat digunakan untuk mengganti content
+    yang berada di dalam div menjadi isi dari fragment tersebut
+4. Jelaskan bagaimana penggunaan th:object beserta tujuannya
+    - penggunaan th:object dilakukan saat terdapat beberapa input(contohnya form) lalu input tersebut dibuat menjadi suatu
+    objek dan akan disimpan pada th:object tersebut.
+
