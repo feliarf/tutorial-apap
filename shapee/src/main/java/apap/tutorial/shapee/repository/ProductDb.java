@@ -10,4 +10,5 @@ import java.util.Optional;
 public interface ProductDb extends JpaRepository<ProductModel, Long> {
     List<ProductModel> findByStoreModelId(Long storeId);
     Optional<ProductModel> findById(Long id);
+    List<ProductModel> findByStoreModelIdOrderByHargaAsc(Long storeId);
 }

@@ -74,10 +74,11 @@ public class StoreController {
                 StoreModel store = storeService.getStoreById(Long.parseLong(idStore));
 
                 //Add objek store ke "store" untuk dirender
-                model.addAttribute("store", store);
 
-                List<ProductModel> productList = productService.findAllProductByStoreId(store.getId());
-                model.addAttribute("productList", productList);
+
+                List<ProductModel> productList = productService.getListProductOrderByHargaAsc(store.getId());
+                store.setListProduct(productList);
+                model.addAttribute("store", store);
                 model.addAttribute("isProductListEmpty", productList.isEmpty());
 
                 //Return view template view-store

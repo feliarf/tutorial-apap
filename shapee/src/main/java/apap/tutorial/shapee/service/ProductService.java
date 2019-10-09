@@ -9,5 +9,7 @@ public interface ProductService {
     List<ProductModel> findAllProductByStoreId(Long storeId);
     ProductModel getProductById(Long id);
     ProductModel changeProduct(ProductModel productModel);
-    String delete(ProductModel product);
+    void deleteProduct(ProductModel product);
+
+    List<ProductModel> getListProductOrderByHargaAsc(Long id);
 }

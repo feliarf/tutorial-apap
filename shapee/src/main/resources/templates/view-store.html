@@ -3,20 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <title>View Store</title>
+    <object th:include="fragments/fragment :: css" th:remove="tag"></object>
+    <object th:include="fragments/fragment :: js" th:remove="tag"></object>
 </head>
 <body>
-    <div th:if = "${store != null}">
+<nav th:replace="fragments/fragment :: navbar (pageTitle='View Store')"></nav>
+    <div th:if = "${store != null}" class="container-fluid">
+
         <h2>Informasi Store</h2>
         <h3 th:text="'ID Store: ' + ${store.id}"></h3>
         <h3 th:text="'Nama Store: ' + ${store.nama}"></h3>
         <h3 th:text="'Keterangan: ' + ${store.keterangan}"></h3>
         <h3 th:text="'Followers: ' + ${store.followers}"></h3>
-
-
-        <td><a th:href="@{/store/change/}+${store.id}"> Change Store</a></td>
+        
+        <form th:action="@{/store/change/}+${store.id}">
+            <button class="btn btn-sm btn-primary">
+                Change Store
+            </button>
+        </form>
 
         <h2> Daftar Produk: </h2>
-
+        <form th:action="@{/product/delete}" th:object="${store}" method="POST">
+            <table>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Id Product</th>
+                        <th>Nama</th>
+                        <th>Harga</th>
+                        <th>Deskripsi</th>
+                        <th>Stok</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="product, iterationStatus : *{listProduct}" th:style="${iterationStatus.even} ? 'color: blue'">
+                        <td th:text="${iterationStatus.count}"></td>
+                        <td th:text="${product.id}"></td>
+                        <td th:text="${product.nama}"></td>
+                        <td th:if="${product.harga} >= 10000">Diatas 10k</td>
+                        <td th:unless="${product.harga} >= 10000">Dibawah 10k</td>
+                        <td th:text="${product.deskripsi}"></td>
+                        <td th:text="${product.stok}"></td>
+                        <td>
+                            <input type="checkbox" th:field="*{listProduct}" th:value="${product.id}"/>
+                            <label th:for="${#ids.prev('listProduct')}">Hapus</label>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <button type="submit" class="btn btn-sm btn-danger">Hapus yang dipilih</button>
+        </form>
+        <br>
+        <form th:action="@{/product/add/}+${store.id}">
+            <button class="btn btn-sm btn-primary">
+                Add Product
+            </button>
+        </form>
+        <!--
         <div th:each="product : ${productList}">
             <h3 th:text="'ID Product: ' + ${product.id}"></h3>
             <h3 th:text="'Nama: ' + ${product.nama}"></h3>
@@ -27,6 +70,7 @@
             <td> <a th:href="@{~/product/delete/{id}(id=${product.id})}"> delete product </a></td>
             </br>
         </div>
+        !-->
         <div th:if="${isProductListEmpty}">
             <td> <a th:href="@{~/store/delete/{id}(id=${store.id})}"> delete store </a></td>
         </div>
@@ -34,8 +78,6 @@
     <div th:unless = "${store != null}">
         <h3>Store tidak ditemukan</h3>
     </div>
-
-    <td> <a th:href="@{/product/add/}+${store.id}"> Add Product </a></td>
 
 </body>
 </html>

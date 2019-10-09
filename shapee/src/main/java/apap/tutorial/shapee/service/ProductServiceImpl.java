@@ -44,10 +44,13 @@ public class ProductServiceImpl implements ProductService{
     }
 
     @Override
-    public String delete(ProductModel product) {
-        String nama = product.getNama();
+    public void deleteProduct(ProductModel product) {
         productDb.delete(product);
-        return nama;
+    }
+
+    @Override
+    public List<ProductModel> getListProductOrderByHargaAsc(Long id) {
+        return productDb.findByStoreModelIdOrderByHargaAsc(id);
     }
 
 }
