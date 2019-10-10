@@ -17,7 +17,7 @@ public class StoreInMemoryService implements StoreService{
     }
 
     @Override
-    public StoreModel getStoreById(Long id) {
+    public StoreModel getStoreById(long id) {
         return null;
     }
 

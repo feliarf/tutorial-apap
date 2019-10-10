@@ -94,4 +94,43 @@ menyelesaikan latihan nomor 3
 4. Jelaskan bagaimana penggunaan th:object beserta tujuannya
     - penggunaan th:object dilakukan saat terdapat beberapa input(contohnya form) lalu input tersebut dibuat menjadi suatu
     objek dan akan disimpan pada th:object tersebut.
+    
+---
 
+## Tutorial 5
+### What I have learned today
+1. Jelaskan bagian mana saja dari test yang dibuat pada latihan no 2 adalah given, when, dan and
+then.
+    - Given
+       Mulai dari inisiasi objek storemodel (generatedummyproductmodel) hingga bagian when(when yang mendefinisikan
+       sesuatu yang dikembalikan oleh database).
+    - When
+        pada bagian when yang berisi interaksi dan kondisi yang akan diuji(storeService.getStoreById(1L) yang menampilkan
+                                                                           objek Store dengan id 1)
+    - Then 
+        bagian verify dan mockMvc beserta dengan .andExpect yang ada pada mockMvc
+        
+2. Jelaskan perbedaan line coverage dan logic coverage.
+    - Line coverage merupakan jumlah baris code yang telah dilakukan telah dilakukan proses testing. Sedangkan untuk 
+    logic coverage adalah pengujian struktur internal code. Truth asssignment untuk suatu expression diverifikasi oleh
+    test ini. 
+    
+3. Pada keadaan ideal, apa yang seharusnya dibuat terlebih dahulu, code atau unit test? Mengapa
+seperti itu? Apa akibatnya jika urutannya dibalik, adakah risiko tak terlihat yang mungkin
+terjadi?
+    - Menurut saya akan lebih baik jika test yang dibuat terlebih dahulu karena pada test kita telah
+    mendefinisikan output apa yang diinginkan sehingga saat kita membuat code kita sudah mengetahui hasil apa yang
+    harus dicapai dan kita lebih fokus untuk membuat code yang sesuai dengan output. Apabila urutannya dibalik
+    maka output yang akan menyesuaikan test dan test tersebut kurang berfungsi sebagai mana tujuan utama pembuatan test sehingga
+    bisa saja terdapat hasil yang tidak sesuai dengan yang diharapkan
+    
+4. [Bonus] Jelaskan mengapa pada latihan no 3, main class spring tidak diikutsertakan ke dalam
+perhitungan coverage? Apa saja yang dapat menyebabkan suatu class dapat di-exclude dari
+perhitungan code coverage.
+    - Proses testing dilakukan dengan membuat sebuah unit testing. Main class tidak diikutsertakan dalam proses testing karena code pada main class
+merupakan proses yang dijalankan secara keseluruhan sehingga jika dilakukan testing maka akan menjadi
+sangat kompleks.
+Alasan mengapa suatu class dapat diexclude yaitu:
+        1. Primitive models dan Data Transfer Objects tidak termasuk ke perhitungan coverage karena keduanya sudah masuk ke 
+    perhitungan secara tidak langsung
+        2. exclude class tidak dapat dibuat test

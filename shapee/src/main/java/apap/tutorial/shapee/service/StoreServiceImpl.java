@@ -16,7 +16,7 @@ public class StoreServiceImpl implements StoreService {
     StoreDb storeDb;
 
     @Override
-    public StoreModel getStoreById(Long id) {
+    public StoreModel getStoreById(long id) {
         return storeDb.findById(id).get();
     }
 

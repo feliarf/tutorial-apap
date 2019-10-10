@@ -11,7 +11,7 @@ public class StoreModel implements Serializable, Comparable<StoreModel>{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private long id;
 
     @NotNull
     @Size(max = 10)
@@ -23,18 +23,17 @@ public class StoreModel implements Serializable, Comparable<StoreModel>{
     @Column(name="keterangan", nullable = false)
     private String keterangan;
 
-    @NotNull
     @Column(name="followers")
-    private Integer followers;
+    private int followers;
 
     @OneToMany(mappedBy = "storeModel", fetch=FetchType.LAZY, cascade = CascadeType.ALL)
     private List<ProductModel> listProduct;
 
-    public Long getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -54,11 +53,11 @@ public class StoreModel implements Serializable, Comparable<StoreModel>{
         this.keterangan = keterangan;
     }
 
-    public Integer getFollowers() {
+    public int getFollowers() {
         return followers;
     }
 
-    public void setFollowers(Integer followers) {
+    public void setFollowers(int followers) {
         this.followers = followers;
     }
 
