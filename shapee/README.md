@@ -101,13 +101,13 @@ menyelesaikan latihan nomor 3
 ### What I have learned today
 1. Jelaskan bagian mana saja dari test yang dibuat pada latihan no 2 adalah given, when, dan and
 then.
-    - Given
+    - Given :
        Mulai dari inisiasi objek storemodel (generatedummyproductmodel) hingga bagian when(when yang mendefinisikan
        sesuatu yang dikembalikan oleh database).
-    - When
+    - When :
         pada bagian when yang berisi interaksi dan kondisi yang akan diuji(storeService.getStoreById(1L) yang menampilkan
                                                                            objek Store dengan id 1)
-    - Then 
+    - Then :
         bagian verify dan mockMvc beserta dengan .andExpect yang ada pada mockMvc
         
 2. Jelaskan perbedaan line coverage dan logic coverage.
