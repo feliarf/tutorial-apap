@@ -7,7 +7,7 @@ import apap.tutorial.shapee.model.StoreModel;
 public interface StoreService {
 
     //Method untuk mendapatkan data store berdasarkan id
-    StoreModel getStoreById(Long id);
+    StoreModel getStoreById(long id);
 
     //Method untuk menambah store
     void addStore(StoreModel storeModel);
