@@ -12,7 +12,7 @@
 <h3> Tambah Product </h3>
 <form th:action="@{/product/add/}+${storeId}" th:object="${store}" method="POST">
     <input type="hidden" th:field="*{id}"/>
-    <table id="inputform" class="table">
+    <table class="table">
         <thead>
             <tr>
                 <td>Nama</td>
@@ -26,7 +26,7 @@
         <tbody>
             <tr th:each="product, rowStat : *{listProduct}">
                 <td>
-                    <input type="text" name="nama" th:field="*{listProduct[__${rowStat.index}__].nama}" />
+                        <input type="text" name="nama" th:field="*{listProduct[__${rowStat.index}__].nama}" />
                 </td>
                 <td>
                     <input type="text" name="deskripsi" th:field="*{listProduct[__${rowStat.index}__].deskripsi}" />

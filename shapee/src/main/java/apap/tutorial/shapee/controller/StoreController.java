@@ -90,7 +90,7 @@ public class StoreController {
         }
 
         //API yang digunakan untuk menuju halaman form change store
-        @RequestMapping(value="store/change/{idStore}", method = RequestMethod.GET)
+            @RequestMapping(value="store/change/{idStore}", method = RequestMethod.GET)
         public String changeStoreFormPage(@PathVariable String idStore, Model model){
             try {
                 //Mengambil existing data source

@@ -134,3 +134,24 @@ Alasan mengapa suatu class dapat diexclude yaitu:
         1. Primitive models dan Data Transfer Objects tidak termasuk ke perhitungan coverage karena keduanya sudah masuk ke 
     perhitungan secara tidak langsung
         2. exclude class tidak dapat dibuat test
+
+---
+
+## Tutorial 6
+### What I have learned today
+1. Apa itu postman? Apa kegunaan dari postman?
+    -   Postman merupakan sebuah tool yang digunakan oleh para developer untuk 
+        pembuatan API dan REST Client atau istilahnya adalah aplikasi yang digunakan untuk
+        melakukan uji coba REST API yang telah kita buat. Fungsi utama postman ini adalah 
+        sebagai GUI API Caller. Sekarang ini Postman menyediakan fitur lain juga seperti S
+        haring Collection API for Documentation , Testing API , Realtime Collaboration Team, 
+        Monitoring API, Integration 
+        
+2. Apa kegunaan dari annotation @JsonIgnoreProperties?
+    -   @JsonIgnoreProperties berfungsi sebagai penanda untuk mengabaikan berbagai properti logic
+        pada JSON serialization dan deserialization. Anotasi ini digunakan pada class level
+        
+3.  Apa itu ResponseEntity dan apa kegunaannya?
+    -   Response Entity digunakan untuk merepresentasikan keseluruhan bagian HTTP response yang 
+        terdiri status code, header, and body. Dengan adanya Response Entity, kita dapat mengkonfigurasi 
+        secara menyeluruh. Response Entity merupakan tipe generik. 
