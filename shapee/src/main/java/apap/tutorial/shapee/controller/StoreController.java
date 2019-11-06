@@ -22,8 +22,8 @@ public class StoreController {
     @Autowired
     private ProductService productService;
 
-    @RequestMapping("/")
-    private String home(){ return "home"; }
+    ///@RequestMapping("/")
+    ///private String home(){ return "home"; }
 
     //URL Mapping View
     //API yang digunakan untuk mengakses halaman add store

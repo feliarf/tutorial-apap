@@ -155,3 +155,30 @@ Alasan mengapa suatu class dapat diexclude yaitu:
     -   Response Entity digunakan untuk merepresentasikan keseluruhan bagian HTTP response yang 
         terdiri status code, header, and body. Dengan adanya Response Entity, kita dapat mengkonfigurasi 
         secara menyeluruh. Response Entity merupakan tipe generik. 
+
+## Tutorial 7
+### What I have learned today
+1. Jelaskan secara singkat perbedaan Otentikasi dan Otorisasi! Di bagian mana (dalam kode
+yang telah anda buat) konsep tersebut diimplementasi?
+    - perbedaan antara otentikasi dan otorisasi adalah bahwa otentikasi adalah proses memeriksa detail 
+      pengguna untuk mengidentifikasinya dan memberikan akses ke sistem sementara otorisasi adalah proses 
+      memeriksa hak atau izin pengguna yang diotentikasi untuk mengakses sumber daya sistem.
+      Otentikasi : .antMatchers("/store/**").hasAnyAuthority("MERCHANT")
+                   .antMatchers("/user/addUser").hasAnyAuthority("ADMIN")
+      Otorisasi : .anyRequest().authenticated()
+
+2. Apa itu BCryptPasswordEncoder? Jelaskan secara singkat cara kerjanya!
+    - BCryptPasswordEncoder merupakan suatu fungsi yang digunakan untuk melakukan hashing pada suatu password.
+    Cara kerjanya, Bcrypt akan mengubah password yang dimasukkan menjadi suatu kode supaya dapat terjaga keamanannya. 
+
+3. Jelaskan secara singkat apa itu UUID dan mengapa kita memakai UUID di UserModel.java?
+    - UUID merupakan suatu class merepresentasikan sebuah identifier universal yang sifatnya unik dan tetap serta merepresentasikan
+    128-bit value. kita memakai UUID pada usermodel supaya
+    kita dapat membuat nilai Id yang sifatnya unik
+
+4. Apa kegunaan class UserDetailsServiceImpl.java? Mengapa harus ada class tersebut
+    -padahal kita sudah memiliki class UserRoleServiceImpl.java?
+    kita menggunakan class UserDetailsServiceImpl supaya kita dapat melakukan otentikasi menggunakan 
+    data yang tersimpan dalam database. Class tersebut memang harus ada karena kedua 
+    method tersebut memiliki fungsi yang berbeda. Sedangkan UserRoleServiceImpl digunakan untuk 
+    membuat method yang nantinya akan digunakan untuk mengakses database
