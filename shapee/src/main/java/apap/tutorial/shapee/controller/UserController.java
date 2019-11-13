@@ -19,19 +19,28 @@ public class UserController {
 
     @RequestMapping(value = "/addUser", method = RequestMethod.POST)
     private String addUserSubmit(@ModelAttribute UserModel user, Model model){
-        if (user.getPassword().length() < 8) {
-            model.addAttribute("status", "Password tidak boleh kurang dari 8 karakter!");
-            return "home";
-        } else {
-            if (user.getPassword().matches(".*[a-zA-Z].*") && user.getPassword().matches(".*[0-9].*")) {
-                userService.addUser(user);
-                model.addAttribute("status", "User baru berhasil ditambahkan");
-                return "home";
-            } else {
-                model.addAttribute("status", "Password harus mengandung angka dan huruf");
-                return "home";
-            }
-        }
+         UserModel userBaru = userService.getUserModel(user.getUsername());
+         String usernameBaru = userBaru.getUsername();
+         if (usernameBaru == null) {
+             if (user.getPassword().length() < 10) {
+                 model.addAttribute("status", "Password tidak boleh kurang dari 10 karakter!");
+                 return "home";
+             } else {
+                 if (user.getPassword().matches(".*[a-zA-Z].*") && user.getPassword().matches(".*[0-9].*")) {
+                     userService.addUser(user);
+                     model.addAttribute("status", "User baru berhasil ditambahkan");
+                     return "home";
+                 } else {
+                     model.addAttribute("status", "Password harus mengandung angka dan huruf");
+                     return "home";
+                 }
+             }
+         }
+         else{
+             model.addAttribute("status", "Username sudah terdaftar");
+             return "home";
+         }
+
     }
 
     @RequestMapping(value = "/updatePassword/{username}", method = RequestMethod.GET)
