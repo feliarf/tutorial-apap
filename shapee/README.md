@@ -182,3 +182,40 @@ yang telah anda buat) konsep tersebut diimplementasi?
     data yang tersimpan dalam database. Class tersebut memang harus ada karena kedua 
     method tersebut memiliki fungsi yang berbeda. Sedangkan UserRoleServiceImpl digunakan untuk 
     membuat method yang nantinya akan digunakan untuk mengakses database
+    
+## Tutorial 8
+### What I have learned today
+1. Jelaskan apa yang Anda lakukan di latihan dalam satu paragraf per-soal. Berikan screenshot
+   sebagai ilustrasi dari apa yang Anda jelaskan.
+Latihan :
+    1. Untuk soal nomor 1, pertama saya menambahkan atribut 'type' pada props yang ada di Item.js. Lalu, pada tag input,
+    saya menambahkan atribut type juga. selain pada item.js, atribut "type" juga ditambahkan pada list.js dan app.js.
+    Pada list.js, atribut type ditambahkan dalam tag item. Sedangkan pada app.js, atribut type ditambahkan pada kedua 
+    tag List dimana typenya adalah hidden untuk list yang akan menampilkan keseluruhan menu dan checkbox untuk list yang
+    menampilkan daftar favorit.
+    https://i.ibb.co/gTcSXLR/Capture.png
+    https://i.ibb.co/6rsdfn3/Capture1.png
+    https://i.ibb.co/rcmNbF3/Capture2.png
+    https://i.ibb.co/yWNdW8j/Capture3.png
+    
+    2. Untuk soal nomor 2, saya menghapus bagian else newItems.splice(targetInd, 1); pada method handleItemClickProduct 
+     yang berada di app.js supaya saat  kita mengklik button product tersebut, product yang sudah difavoritkan tidak terhapus. Lalu saya membuat method
+    baru yaitu handleItemClickFav dimana isi dari method tersebut sama seperti isi method handleItemClickProduct sebelum
+    dihapus bagian else.
+    https://i.ibb.co/gWCXHV7/Capture.png
+    https://i.ibb.co/51GMjnz/Capture1.png
+     
+     3. Untuk soal nomor 3, saya menambahkan state baru yaitu myFavorit dengan nilai boolean sebagai state yang akan digunakan untuk
+     checkbox favorit product. Lalu, saya membuat method showfavorit yang akan mengupdate state myFavorit tersebut menjadi 
+     negasi nilai booleannya. boolean tersebut nantinya akan digunakan untuk menentukan apakah daftar favorit produk akan 
+     ditampilkan atau tidak.
+     https://i.ibb.co/pLRv3rC/Capture.png
+     https://i.ibb.co/ZzTpGfs/Capture1.png
+     https://i.ibb.co/gMFB7Ss/Capture2.png
+     https://i.ibb.co/CnCKmDB/Capture3.png
+     
+     4. Untuk soal nomor 4, saya membuat component baru yaitu emptyState.js yang berisi tampilan apabila produk favorit
+     blm ditambahkan. setelah itu, saya membuat dua tag div yang akan mengecek apakah produk favorit masih berjumlah 0 atau 
+     sudah lebih dr 1. lalu untuk div dengan kondisi produk masih 0 akan menampilkan emptyState.js
+     https://i.ibb.co/YDxF80t/Capture.png
+     https://i.ibb.co/ftwMsGh/Capture1.png
