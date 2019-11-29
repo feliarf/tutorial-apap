@@ -33,7 +33,7 @@ mengapa kalian melakukan langkah - langkah tersebut?
     >![](https://i.ibb.co/SdSnD75/6.png)
 
     - langkah 7
-    ![](https://i.ibb.co/cxKHHK6/7.png)
+    >![](https://i.ibb.co/cxKHHK6/7.png)
 
     - langkah 8
     >![](https://i.ibb.co/d7NChZz/8.png)
