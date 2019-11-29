@@ -15,29 +15,28 @@ mengapa kalian melakukan langkah - langkah tersebut?
     
 3. Masukkan jawaban dari TODO pada Component Lifecycle pada pertanyaan ini.
     - langkah 1
-    > ![ ] (https://i.ibb.co/t4BKpjH/1.png)
-    ![](https://i.ibb.co/zXh3Xwz/Capture.png)
+    ![](https://i.ibb.co/t4BKpjH/1.png)
 
     - langkah 2
-    ![] (https://i.ibb.co/8dCwTdF/2.png)
+    ![](https://i.ibb.co/8dCwTdF/2.png)
 
     - langkah 3
-    ![] (https://i.ibb.co/2WYbyg6/3.png)
+    ![](https://i.ibb.co/2WYbyg6/3.png)
 
     - langkah 4
-    ![] (https://i.ibb.co/rvjxsQv/4.png)
+    ![](https://i.ibb.co/rvjxsQv/4.png)
 
     - langkah 5
-    ![] (https://i.ibb.co/Brv74Bk/5.png)
+    ![](https://i.ibb.co/Brv74Bk/5.png)
 
     - langkah 6
-    ![] (https://i.ibb.co/SdSnD75/6.png)
+    ![](https://i.ibb.co/SdSnD75/6.png)
 
     - langkah 7
-    ![] (https://i.ibb.co/cxKHHK6/7.png)
+    ![](https://i.ibb.co/cxKHHK6/7.png)
 
     - langkah 8
-    ![] (https://i.ibb.co/d7NChZz/8.png)
+    ![](https://i.ibb.co/d7NChZz/8.png)
 
 4. Jelaskan fungsi dari componentDidMount, shouldComponentUpdate,
 componentDidUpdate, componentWillReceiveProps,
