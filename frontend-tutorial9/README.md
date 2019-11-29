@@ -16,6 +16,7 @@ mengapa kalian melakukan langkah - langkah tersebut?
 3. Masukkan jawaban dari TODO pada Component Lifecycle pada pertanyaan ini.
     - langkah 1
     > ![ ] (https://i.ibb.co/t4BKpjH/1.png)
+    ![](https://i.ibb.co/zXh3Xwz/Capture.png)
 
     - langkah 2
     ![] (https://i.ibb.co/8dCwTdF/2.png)
