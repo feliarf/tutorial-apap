@@ -1,6 +1,7 @@
 import React from "react";
 import List from "./components/List";
 import dummyItems from "./items.json";
+import "./dark.css"
 import EmptyList from "./components/emptyState";
 export default class App extends React.Component {
 // for class based component, you need to provide render
@@ -9,13 +10,20 @@ export default class App extends React.Component {
         super(props);
         this.state = {
             favItems: [],
-            myFavourite: false
+            myFavourite: false,
+            showDark : false
         };
     }
 
     showFavourite = () => {
         this.setState(stateFavourite => ({
             myFavourite: !stateFavourite.myFavourite
+        }))
+    }
+
+    showDarkMode = () => {
+        this.setState(stateDark => ({
+            showDark: !stateDark.showDark
         }))
     }
 
@@ -39,15 +47,16 @@ export default class App extends React.Component {
     };
 
   render() {
-      const { favItems, myFavourite } = this.state;
+      const { favItems, myFavourite, showDark } = this.state;
     return (
-        <div className="container-fluid">
+        <div className= {`${showDark? "container-fluid dark" : "container-fluid"}`}>
           <h1 className="text-center">
             Welcome!
             <small>Class-based</small>
               <h6><input type="checkbox" onClick={this.showFavourite}/>Show Favorit</h6>
+              <h6><input type="checkbox" onClick={this.showDarkMode}/>Dark Mode</h6>
           </h1>
-          <div className="container pt-3">
+          <div className="container pt-3" >
             <div className="row">
               <div className="col-sm">
                 <List
